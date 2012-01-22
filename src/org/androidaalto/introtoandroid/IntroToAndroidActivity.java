@@ -1,6 +1,7 @@
 package org.androidaalto.introtoandroid;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -25,5 +26,7 @@ public class IntroToAndroidActivity extends Activity {
     
     public void pressMeClicked(View view) {
         Toast.makeText(this, "Button pressed", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 }
