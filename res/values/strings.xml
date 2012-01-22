@@ -3,5 +3,6 @@
 
     <string name="hello">Hello World, IntroToAndroidActivity!</string>
     <string name="app_name">IntroToAndroid</string>
+    <string name="pressMe">Press me</string>
 
 </resources>
