@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.format.Time;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -41,5 +42,17 @@ public class IntroToAndroidActivity extends Activity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu, menu);
         return true;
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+        case R.id.pressMeMenu:
+            pressMeClicked(null);
+            return true;
+        default:
+            return super.onOptionsItemSelected(item);
+        }
     }
 }
