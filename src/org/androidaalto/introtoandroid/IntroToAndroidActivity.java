@@ -3,6 +3,7 @@ package org.androidaalto.introtoandroid;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.format.Time;
 import android.view.View;
 import android.widget.Toast;
 
@@ -26,7 +27,10 @@ public class IntroToAndroidActivity extends Activity {
     
     public void pressMeClicked(View view) {
         Toast.makeText(this, "Button pressed", Toast.LENGTH_LONG).show();
+        Time pressTime = new Time();
+        pressTime.setToNow();
         Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra("PRESS_TIME",pressTime.toString());
         startActivity(intent);
     }
 }
